@@ -63,6 +63,7 @@ section {
 }
 
 /* aside styles */
+/*corregir barra de scroll*/
 
 aside h1 {
   margin-bottom: 15px;
@@ -127,22 +128,26 @@ li small {
 .chat {
   display: flex;
   flex-direction: column;
+  background-color: var(--white);
+  border: 3px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-strong);
+  height: 100%;
+  overflow: hidden;
 }
 
 .chat-cont-empty {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.chat-cont-empty p {
-  color: gray;
+  height: 100%;
+  background-color: var(--green-100);
 }
 
 .chat header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 3px solid var(--border);
   padding: 15px;
-  background-color: #fafafa;
+  background-color: var(--pink-300);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,12 +155,13 @@ li small {
 
 .chat header button {
   padding: 8px 15px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: gray;
-  color: white;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  background-color: var(--yellow-300);
+  color: var(--border);
+  font-weight: bold;
   cursor: pointer;
-  transition: all .2s;
+  box-shadow: var(--shadow-soft);
 }
 
 .chat-body {
@@ -163,8 +169,10 @@ li small {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px;
+  gap: 15px;
+  padding: 20px;
+  background-image: radial-gradient(var(--blue-200) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 .message {
