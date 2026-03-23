@@ -124,7 +124,6 @@ const Register = () => {
         <p>Selecciona tu avatar:</p>
 
         <div className="avatar-selector">
-          <p>Elige una foto de perfil</p>
           <div className="avatar-grid">
             {avatares.map((url) => (
               <img

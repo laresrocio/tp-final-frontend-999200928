@@ -340,19 +340,40 @@ li small {
   align-items: center;
   flex-direction: column;
   background-color: var(--background);
-  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.cont-not-found h1 {
+  font-family: var(--pixel-font);
+  font-size: 3rem;
+  color: var(--pink-300);
+  -webkit-text-stroke: 0.2px var(--border);
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .cont-not-found a {
-  border: 2px solid var(--border);
-  background-color: var(--blue-300);
+  text-decoration: none;
+  padding: 12px 25px;
+  border: 3px solid var(--border);
+  background-color: var(--pink-200);
   color: var(--border);
   font-weight: bold;
-  box-shadow: var(--shadow-soft);
+  border-radius: 12px;
+  box-shadow: var(--shadow-strong);
+  transition: all 0.1s;
 }
 
 .cont-not-found a:hover {
-  background-color: var(--blue-200);
+  background-color: var(--yellow-300);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0px var(--border);
+}
+
+.cont-not-found a:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--border);
 }
 
 

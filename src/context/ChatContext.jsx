@@ -34,6 +34,7 @@ const ChatProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("user")
     setLoggedUser(null);
+    setUsers(mockUsers)
   }
 
   const handleMessages = (newMessage) => {
