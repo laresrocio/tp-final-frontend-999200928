@@ -25,7 +25,7 @@ const Chat = () => {
 
     const currentTime = new Date()
     const newMessage = {
-      author: loggedUser?.firstName,
+      author: "me",
       time: currentTime.getHours() + ":" + currentTime.getMinutes(),
       text: text
     }
@@ -60,10 +60,12 @@ const Chat = () => {
       </header>
       <div className="chat-body" ref={chatBodyRef}>
         {
-          selectedUser.messages.map((message) => <div key={message.id} className={`message ${message.author === loggedUser?.firstName ? "me" : "received"}`}>
-            <p><b>{message.author}</b>: {message.text}</p>
-            <p className="timestamp">{message.time}</p>
-          </div>)
+          selectedUser.messages.map((message) =>
+            <div key={message.id}
+              className={`message ${message.author === "me" ? "me" : "received"}`}>
+              <p><b>{message.author === "me" ? loggedUser?.firstName : message.author}</b>: {message.text}</p>
+              <p className="timestamp">{message.time}</p>
+            </div>)
         }
       </div>
       <div className="chat-input">
