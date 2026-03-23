@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +36,7 @@
   --shadow-strong: 5px 5px 0px #000;
 
   /* tipografia */
+  --pixel-font: 'VT323', monospace;
   --primary-font: "Comic Sans MS", "Segoe UI", sans-serif;
 }
 
@@ -66,9 +69,13 @@ section {
 /*corregir barra de scroll*/
 
 aside h1 {
+  font-family: var(--pixel-font);
   margin-bottom: 15px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--text);
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 5px;
 }
 
 .search {
@@ -293,12 +300,27 @@ li small {
 }
 
 .login-view .title-login {
-  font-family: var(--primary-font);
+  font-family: var(--pixel-font);
   color: var(--text);
   margin-bottom: 25px;
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: normal;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.login-view form h3 {
+  background-color: var(--pink-300);
+  color: var(--border);
+  margin: -30px -30px 10px -30px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 3px solid var(--border);
+  border-radius: 8px 8px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .login-view form input {
@@ -330,6 +352,11 @@ li small {
   cursor: pointer;
   box-shadow: var(--shadow-soft);
   transition: all 0.1s;
+}
+
+.login-view form button+button {
+  background-color: var(--blue-300);
+  margin-top: 5px;
 }
 
 .login-view form button:hover {

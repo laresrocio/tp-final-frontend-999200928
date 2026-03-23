@@ -35,8 +35,10 @@ const Login = () => {
 
   return (
     <section className="login-view">
-      <h2 className="title-login">Bienvenido, inicia sesión</h2>
+      <h2 className="title-login">BIENVENIDO A WSP-95</h2>
+
       <form onSubmit={handleSubmit}>
+        <h3>INICIA SESION</h3>
         <input
           type="email"
           placeholder="Correo electrónico"
@@ -49,8 +51,9 @@ const Login = () => {
         />
         <button>Ingresar</button>
         {
-          error && <p className="error-form">Error al ingresar</p>
+          error && <p className="error-form">Contraseña o Correo incorrectos</p>
         }
+        <button >Registrarse</button>
       </form>
     </section>
   )
