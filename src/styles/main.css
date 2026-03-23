@@ -267,10 +267,21 @@ li small {
 
 
 /* Login styles */
+.login-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: 20px;
+}
 
-section form {
-  max-width: 360px;
-  margin: 60px auto;
+
+.login-view form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -281,42 +292,63 @@ section form {
   box-shadow: var(--shadow-strong);
 }
 
-section .title-login {
-  text-align: center;
-  margin-top: 60px;
-  font-weight: 500;
-}
-
-section form input {
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-section form input:focus {
-  outline: 1px solid #9c9c9c;
-}
-
-section form button {
-  background-color: var(--pink-300);
-  border: 2px solid var(--border);
-  padding: 12px;
+.login-view .title-login {
+  font-family: var(--primary-font);
+  color: var(--text);
+  margin-bottom: 25px;
+  font-size: 1.8rem;
   font-weight: bold;
-  box-shadow: var(--shadow-soft);
-  cursor: pointer;
-  transition: all .2s;
-}
-
-section form button:hover {
-  background-color: var(--blue-300);
-
-}
-
-.error-form {
   text-align: center;
-  color: rgb(216, 26, 26);
-  font-size: 15px;
+}
+
+.login-view form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  background-color: var(--white);
+  transition: all 0.2s;
+}
+
+.login-view form input:focus {
+  outline: none;
+  border-color: var(--blue-300);
+  background-color: var(--blue-100);
+}
+
+.login-view form button {
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background-color: var(--pink-300);
+  color: var(--border);
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.1s;
+}
+
+.login-view form button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000;
+}
+
+.login-view form button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000;
+}
+
+.login-view .error-form {
+  text-align: center;
+  color: #ff4757;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: -5px;
 }
 
 @media (max-width: 880px) {
