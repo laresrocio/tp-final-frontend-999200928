@@ -33,6 +33,11 @@ const Login = () => {
     navigate("/")
   }
 
+  const handleRegisterBtn = () => {
+    navigate("/register")
+  }
+
+
   return (
     <section className="login-view">
       <h2 className="title-login">BIENVENIDO A WSP-95</h2>
@@ -53,7 +58,7 @@ const Login = () => {
         {
           error && <p className="error-form">Contraseña o Correo incorrectos</p>
         }
-        <button >Registrarse</button>
+        <button onClick={handleRegisterBtn} >Registrarse</button>
       </form>
     </section>
   )
