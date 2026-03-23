@@ -35,7 +35,6 @@ const Login = () => {
       return
     }
 
-    handleUser({ email, password })
     navigate("/")
   }
 

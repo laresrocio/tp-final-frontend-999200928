@@ -25,8 +25,10 @@ const ChatProvider = ({ children }) => {
     }
 
     if (foundUser.password === userData.password) {
+      handleUser(foundUser)
       return true
     }
+    return false
   }
 
   const logout = () => {

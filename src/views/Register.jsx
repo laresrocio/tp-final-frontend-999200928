@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom"
 const Register = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [nombre, setNombre] = useState("")
-  const [apellido, setApellido] = useState("")
-  const [pais, setPais] = useState("")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [country, setCountry] = useState("")
   const [avatar, setAvatar] = useState("https://api.dicebear.com/7.x/pixel-art/svg?seed=Sarah")
 
   const { register, loggedUser } = useContext(ChatContext);
@@ -38,15 +38,15 @@ const Register = () => {
   }
 
   const handleChangeNombre = (e) => {
-    setNombre(e.target.value)
+    setFirstName(e.target.value)
   }
 
   const handleChangeApellido = (e) => {
-    setApellido(e.target.value)
+    setLastName(e.target.value)
   }
 
   const handleChangePais = (e) => {
-    setPais(e.target.value)
+    setCountry(e.target.value)
   }
 
   const handleAvatar = (url) => {
@@ -58,15 +58,15 @@ const Register = () => {
     e.preventDefault()
     setError(null)
 
-    if (!nombre || !email || !password || !apellido || !pais) {
+    if (!firstName || !email || !password || !lastName || !country) {
       setError("Faltan completar campos");
       return;
     }
-    if (nombre.length < 3) {
+    if (firstName.length < 3) {
       setError("El nombre debe tener al menos 3 caracteres");
       return;
     }
-    if (apellido.length < 3) {
+    if (lastName.length < 3) {
       setError("El apellido debe tener al menos 3 caracteres");
       return;
     }
@@ -81,7 +81,7 @@ const Register = () => {
     }
 
     const newUser = {
-      email, password, nombre, apellido, pais, avatar, id: Date.now()
+      email, password, firstName, lastName, country, avatar, id: Date.now()
     }
     register(newUser);
     navigate("/")
