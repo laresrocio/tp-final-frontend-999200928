@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .pixel-rosa { fill: #ff69b4; } /* Rosa chicle pixelado */
+      .pixel-rosa-oscuro { fill: #ff1493; } /* Rosa fuerte para detalles */
+    </style>
+  </defs>
+
+  <rect x="15" y="30" width="10" height="40" class="pixel-rosa"/> <rect x="20" y="60" width="10" height="10" class="pixel-rosa"/> <rect x="25" y="50" width="10" height="10" class="pixel-rosa-oscuro"/> <rect x="30" y="60" width="10" height="10" class="pixel-rosa"/> <rect x="35" y="30" width="10" height="40" class="pixel-rosa"/> <rect x="50" y="50" width="15" height="10" class="pixel-rosa-oscuro"/>
+
+  <rect x="70" y="30" width="15" height="10" class="pixel-rosa-oscuro"/> <rect x="70" y="40" width="5" height="10" class="pixel-rosa"/>  <rect x="80" y="40" width="5" height="10" class="pixel-rosa"/>  <rect x="70" y="50" width="15" height="10" class="pixel-rosa-oscuro"/> <rect x="80" y="60" width="5" height="10" class="pixel-rosa"/>  <rect x="70" y="70" width="15" height="10" class="pixel-rosa-oscuro"/> <rect x="90" y="30" width="10" height="10" class="pixel-rosa-oscuro"/> <rect x="90" y="40" width="5" height="10" class="pixel-rosa"/>  <rect x="90" y="50" width="10" height="10" class="pixel-rosa-oscuro"/> <rect x="95" y="60" width="5" height="10" class="pixel-rosa"/>  <rect x="90" y="70" width="10" height="10" class="pixel-rosa-oscuro"/> </svg>

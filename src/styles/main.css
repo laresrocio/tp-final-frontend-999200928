@@ -118,7 +118,7 @@
 
 /*estilos de aside*/
 aside {
-  background-color: var(--blue-100);
+  background-color: var(--yellow-200);
   width: 280px;
   padding: 20px;
   overflow-y: auto;
@@ -155,14 +155,16 @@ section {
 
 
 aside h1 {
-  font-family: var(--pixel-font);
   margin-bottom: 15px;
-  font-size: 2rem;
-  color: var(--text);
   text-align: center;
-  border-bottom: 2px solid var(--border);
   padding-bottom: 5px;
   font-weight: normal;
+  font-family: var(--pixel-font);
+  font-size: 3rem;
+  color: var(--pink-300);
+  -webkit-text-stroke: 0.3px var(--border);
+  text-transform: uppercase;
+  border-bottom: 2px dashed var(--yellow-300);
 }
 
 .search {
@@ -173,7 +175,8 @@ aside h1 {
   border-radius: 8px;
   border: 2px solid var(--border);
   font-family: var(--primary-font);
-  background-color: var(--white);
+  background-color: var(--yellow-100);
+
 }
 
 .not-found-text {
@@ -192,7 +195,7 @@ ul {
   display: flex;
   border-radius: 8px;
   border: 2px solid var(--border);
-  background-color: var(--white);
+  background-color: var(--yellow-300);
   padding: 10px;
   cursor: pointer;
   gap: 10px;
@@ -235,7 +238,12 @@ ul {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: var(--green-100);
+  border-radius: 12px;
+  box-shadow: var(--shadow-strong);
+  border: 3px solid var(--border);
+  background-color: var(--green-200);
+  background-image: radial-gradient(var(--green-100) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 .chat header {
