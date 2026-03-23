@@ -378,6 +378,84 @@ li small {
   margin-top: -5px;
 }
 
+/*Register styles*/
+.register-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: 40px 20px;
+}
+
+.register-view .title-login {
+  font-family: var(--pixel-font);
+  color: var(--text);
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.register-view form {
+  width: 100%;
+  max-width: 450px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  background-color: var(--blue-100);
+  padding: 30px;
+  border: 3px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-strong);
+}
+
+/*.register-view form::before {
+  content: "NUEVO USUARIO";
+  display: block;
+  background-color: var(--green-300);
+  margin: -30px -30px 15px -30px;
+  padding: 8px;
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  border-bottom: 3px solid var(--border);
+  border-radius: 8px 8px 0 0;
+}*/
+
+.register-view form input {
+  padding: 10px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--primary-font);
+  background-color: var(--white);
+}
+
+.register-view form button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--pink-300);
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.1s;
+}
+
+.register-view form button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
+}
+
+.register-view form button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+
 @media (max-width: 880px) {
   aside {
     display: none;

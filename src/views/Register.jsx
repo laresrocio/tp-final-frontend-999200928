@@ -40,7 +40,7 @@ const Register = () => {
 
 
   return (
-    <section>
+    <section className="register-view">
       <h2 className="title-login">Ingresa tus datos para registrarte</h2>
       <form onSubmit={handleSubmit}>
         <input
