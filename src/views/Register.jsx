@@ -6,8 +6,19 @@ const Register = () => {
   const [nombre, setNombre] = useState("")
   const [apellido, setApellido] = useState("")
   const [pais, setPais] = useState("")
+  const [avatar, setAvatar] = useState("")
+
 
   const [error, setError] = useState(null)
+
+  const avatares = [
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Felix",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Aneka",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Styles",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Luna",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Bear"
+  ]
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value)
@@ -29,11 +40,16 @@ const Register = () => {
     setPais(e.target.value)
   }
 
+  const handleAvatar = (url) => {
+    console.log("Cambiando avatar a:", url);
+    setAvatar(url);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setError(null)
     const newUser = {
-      email, password, nombre, apellido, pais
+      email, password, nombre, apellido, pais, avatar
     }
     console.log(newUser)
   }
@@ -68,9 +84,29 @@ const Register = () => {
           placeholder="Pais"
           onChange={handleChangePais}
         />
+        <p>Selecciona tu avatar:</p>
+
+        <div className="avatar-selector">
+          <p>Elige una foto de perfil</p>
+          <div className="avatar-grid">
+            <img
+              src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Felix"
+              onClick={() => handleAvatar("https://api.dicebear.com/7.x/pixel-art/svg?seed=Felix")}
+            />
+            <img
+              src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Aneka"
+              onClick={() => handleAvatar("https://api.dicebear.com/7.x/pixel-art/svg?seed=Aneka")}
+            />
+            <img
+              src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack"
+              onClick={() => handleAvatar("https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack")}
+            />
+          </div>
+          <small>Seleccionado: {avatar}</small>
+        </div>
         <button>Registrarse</button>
-      </form>
-    </section>
+      </form >
+    </section >
   )
 }
 
