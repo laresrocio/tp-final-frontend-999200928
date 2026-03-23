@@ -155,6 +155,7 @@ aside h1 {
   text-align: center;
   border-bottom: 2px solid var(--border);
   padding-bottom: 5px;
+  font-weight: normal;
 }
 
 .search {
@@ -338,6 +339,8 @@ li small {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: var(--background);
+  gap: 20px;
 }
 
 .cont-not-found a {
