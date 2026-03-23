@@ -41,6 +41,9 @@ const Login = () => {
   const handleRegisterBtn = () => {
     navigate("/register")
   }
+  const handleAboutBtn = () => {
+    navigate("/about")
+  }
 
 
   return (
@@ -63,7 +66,8 @@ const Login = () => {
         {
           error && <p className="error-form">Contraseña o Correo incorrectos</p>
         }
-        <button onClick={handleRegisterBtn} >Registrarse</button>
+        <button className="btn-register" onClick={handleRegisterBtn} >Registrarse</button>
+        <button className="btn-about" onClick={handleAboutBtn} >Sobre el proyecto</button>
       </form>
     </section>
   )

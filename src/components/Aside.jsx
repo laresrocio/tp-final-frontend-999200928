@@ -30,7 +30,7 @@ const Aside = () => {
       <ul>
         {
           filteredUsers.map((user) => (
-            <li key={user.id} onClick={() => handleClick(user.id)}>
+            <li className="aside-li" key={user.id} onClick={() => handleClick(user.id)}>
               <img src={user.avatar} alt="" />
               <div>
                 {user.firstName} {user.lastName}
