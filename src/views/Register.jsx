@@ -1,5 +1,6 @@
-import { use, useState } from "react"
-
+import { use, useState, useContext } from "react"
+import { ChatContext } from "../context/ChatContext"
+import { useNavigate } from "react-router-dom"
 const Register = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -8,6 +9,8 @@ const Register = () => {
   const [pais, setPais] = useState("")
   const [avatar, setAvatar] = useState("https://api.dicebear.com/7.x/pixel-art/svg?seed=Sarah")
 
+  const { register } = useContext(ChatContext);
+  const navigate = useNavigate();
 
   const [error, setError] = useState(null)
 
@@ -44,6 +47,7 @@ const Register = () => {
     setAvatar(url);
   }
 
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setError(null)
@@ -71,9 +75,10 @@ const Register = () => {
     }
 
     const newUser = {
-      email, password, nombre, apellido, pais, avatar
+      email, password, nombre, apellido, pais, avatar, id: Date.now()
     }
-    console.log(newUser)
+    register(newUser);
+    navigate("/")
   }
 
 

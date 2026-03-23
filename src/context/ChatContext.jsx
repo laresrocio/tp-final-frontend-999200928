@@ -46,8 +46,15 @@ const ChatProvider = ({ children }) => {
 
   const selectedUser = users.find(user => user.id === selectedUserId)
 
+  const register = (newUser) => {
+    setLoggedUser(newUser)
+    localStorage.setItem("user", JSON.stringify(newUser))
+    console.log("usuario registrado y persistido")
+
+  }
+
   return (
-    <ChatContext.Provider value={{ users, handleSelectedUserId, login, logout, handleUser, loggedUser, handleMessages, selectedUser }}>
+    <ChatContext.Provider value={{ users, handleSelectedUserId, login, logout, handleUser, loggedUser, handleMessages, selectedUser, register }}>
       {children}
     </ChatContext.Provider>
   )
