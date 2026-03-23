@@ -45,10 +45,14 @@
 }
 
 aside {
-  background-color: #f0f2f5;
-  width: 260px;
+  background-color: var(--blue-100);
+  width: 280px;
   padding: 20px;
   overflow-y: scroll;
+  border: 3px solid var(--border);
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-strong);
 }
 
 section {
