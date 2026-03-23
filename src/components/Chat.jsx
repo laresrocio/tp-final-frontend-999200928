@@ -1,14 +1,12 @@
 import { useState, useRef, useEffect, useContext } from "react"
 import { ChatContext } from "../context/ChatContext.jsx"
-import { useNavigate } from "react-router-dom"
 
 const Chat = () => {
   const [text, setText] = useState("")
   const chatBodyRef = useRef(null)
 
-  const { selectedUser, logout, handleMessages } = useContext(ChatContext)
+  const { selectedUser, handleMessages } = useContext(ChatContext)
 
-  const navigate = useNavigate()
 
   const handleChangeText = (event) => {
     setText(event.target.value)
@@ -42,7 +40,7 @@ const Chat = () => {
     if (chatBodyRef.current) {
       chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight
     }
-  }, [])
+  }, [selectedUser?.messages])
 
   if (!selectedUser) {
     return (

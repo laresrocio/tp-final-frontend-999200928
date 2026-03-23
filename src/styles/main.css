@@ -45,6 +45,7 @@
   flex-direction: column;
   height: 100vh;
   background-color: var(--background);
+  overflow: hidden;
 }
 
 .app {
@@ -52,6 +53,7 @@
   height: auto;
   display: flex;
   padding: 10px;
+  overflow: hidden;
 }
 
 /*estilos de usermenu*/
@@ -117,6 +119,25 @@ aside {
   margin-right: 15px;
   border-radius: 12px;
   box-shadow: var(--shadow-strong);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+
+aside::-webkit-scrollbar {
+  width: 10px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: var(--blue-100);
+  border-radius: 10px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: var(--blue-300);
+  border: 2px solid var(--border);
+  border-radius: 10px;
 }
 
 section {
@@ -125,8 +146,6 @@ section {
   flex-direction: column;
 }
 
-/* aside styles */
-/*corregir barra de scroll*/
 
 aside h1 {
   font-family: var(--pixel-font);
@@ -231,6 +250,16 @@ li small {
   padding: 20px;
   background-image: radial-gradient(var(--blue-200) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background: var(--pink-300);
+  border: 2px solid var(--border);
+  border-radius: 10px;
 }
 
 /*mensajes*/
