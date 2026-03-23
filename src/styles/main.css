@@ -40,14 +40,74 @@
   --primary-font: "Comic Sans MS", "Segoe UI", sans-serif;
 }
 
-.app {
+.home-screen {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   background-color: var(--background);
-  font-family: var(--primary-font);
+}
+
+.app {
+  flex: 1;
+  height: auto;
   display: flex;
   padding: 10px;
 }
 
+/*estilos de usermenu*/
+.user-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--blue-300);
+  border-bottom: 3px solid var(--border);
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background-color: var(--white);
+}
+
+.profile-info span {
+  font-family: var(--pixel-font);
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.user-nav button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  background-color: var(--yellow-300);
+  color: var(--border);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+}
+
+.user-nav button:hover {
+  background-color: var(--pink-300);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--border);
+}
+
+.user-nav button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border);
+}
+
+/*estilos de aside*/
 aside {
   background-color: var(--blue-100);
   width: 280px;
@@ -160,16 +220,7 @@ li small {
   align-items: center;
 }
 
-.chat header button {
-  padding: 8px 15px;
-  border-radius: 6px;
-  border: 2px solid var(--border);
-  background-color: var(--yellow-300);
-  color: var(--border);
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: var(--shadow-soft);
-}
+
 
 .chat-body {
   flex: 1;
@@ -473,6 +524,8 @@ li small {
   font-size: 0.9rem;
   margin-top: -5px;
 }
+
+
 
 @media (max-width: 880px) {
   aside {

@@ -36,10 +36,7 @@ const Chat = () => {
     setText("")
   }
 
-  const handleLogout = () => {
-    logout()
-    navigate("/login")
-  }
+
 
   useEffect(() => {
     if (chatBodyRef.current) {
@@ -62,7 +59,6 @@ const Chat = () => {
           <h2>{selectedUser.firstName} {selectedUser.lastName}</h2>
           <p>{selectedUser.address.country}</p>
         </div>
-        <button onClick={handleLogout}>Cerrar sesión</button>
       </header>
       <div className="chat-body" ref={chatBodyRef}>
         {
