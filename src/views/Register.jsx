@@ -1,4 +1,4 @@
-import { use, useState, useContext } from "react"
+import { use, useState, useContext, useEffect } from "react"
 import { ChatContext } from "../context/ChatContext"
 import { useNavigate } from "react-router-dom"
 const Register = () => {
@@ -9,8 +9,14 @@ const Register = () => {
   const [pais, setPais] = useState("")
   const [avatar, setAvatar] = useState("https://api.dicebear.com/7.x/pixel-art/svg?seed=Sarah")
 
-  const { register } = useContext(ChatContext);
+  const { register, loggedUser } = useContext(ChatContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loggedUser) {
+      navigate("/");
+    }
+  }, [loggedUser, navigate]);
 
   const [error, setError] = useState(null)
 

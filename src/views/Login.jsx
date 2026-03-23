@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { ChatContext } from "../context/ChatContext"
 import { useNavigate } from "react-router-dom"
 
@@ -7,9 +7,15 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState(null)
 
-  const { login, handleUser } = useContext(ChatContext)
+  const { login, handleUser, loggedUser } = useContext(ChatContext)
 
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (loggedUser) {
+      navigate("/");
+    }
+  }, [loggedUser, navigate]);
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value)
