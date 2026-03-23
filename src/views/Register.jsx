@@ -6,18 +6,18 @@ const Register = () => {
   const [nombre, setNombre] = useState("")
   const [apellido, setApellido] = useState("")
   const [pais, setPais] = useState("")
-  const [avatar, setAvatar] = useState("")
+  const [avatar, setAvatar] = useState("https://api.dicebear.com/7.x/pixel-art/svg?seed=Sarah")
 
 
   const [error, setError] = useState(null)
 
   const avatares = [
-    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Felix",
-    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Aneka",
-    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Styles",
-    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Sarah",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=George",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Christian",
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Christopher",
     "https://api.dicebear.com/7.x/pixel-art/svg?seed=Luna",
-    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Bear"
+    "https://api.dicebear.com/7.x/pixel-art/svg?seed=Liliana"
   ]
 
   const handleChangeEmail = (e) => {
@@ -41,13 +41,35 @@ const Register = () => {
   }
 
   const handleAvatar = (url) => {
-    console.log("Cambiando avatar a:", url);
     setAvatar(url);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setError(null)
+
+    if (!nombre || !email || !password || !apellido || !pais) {
+      setError("Faltan completar campos");
+      return;
+    }
+    if (nombre.length < 3) {
+      setError("El nombre debe tener al menos 3 caracteres");
+      return;
+    }
+    if (apellido.length < 3) {
+      setError("El apellido debe tener al menos 3 caracteres");
+      return;
+    }
+    if (password.length < 6) {
+      setError("La contraseña debe tener al menos 6 caracteres");
+      return;
+    }
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValido.test(email)) {
+      setError("Ingrese un email valido");
+      return;
+    }
+
     const newUser = {
       email, password, nombre, apellido, pais, avatar
     }
@@ -63,21 +85,25 @@ const Register = () => {
           type="email"
           placeholder="Correo Electronico"
           onChange={handleChangeEmail}
+
         />
         <input
           type="password"
           placeholder="Contraseña"
           onChange={handleChangePassword}
+
         />
         <input
           type="text"
           placeholder="Nombre"
           onChange={handleChangeNombre}
+
         />
         <input
           type="text"
           placeholder="Apellido"
           onChange={handleChangeApellido}
+
         />
         <input
           type="text"
@@ -89,21 +115,22 @@ const Register = () => {
         <div className="avatar-selector">
           <p>Elige una foto de perfil</p>
           <div className="avatar-grid">
-            <img
-              src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Felix"
-              onClick={() => handleAvatar("https://api.dicebear.com/7.x/pixel-art/svg?seed=Felix")}
-            />
-            <img
-              src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Aneka"
-              onClick={() => handleAvatar("https://api.dicebear.com/7.x/pixel-art/svg?seed=Aneka")}
-            />
-            <img
-              src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack"
-              onClick={() => handleAvatar("https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack")}
-            />
+            {avatares.map((url) => (
+              <img
+                key={url}
+                src={url}
+                alt="Opción de avatar"
+                className={avatar === url ? "selected" : ""}
+                onClick={() => handleAvatar(url)}
+              />
+            ))}
           </div>
-          <small>Seleccionado: {avatar}</small>
         </div>
+        {error && (
+          <div className="error-mensaje">
+            {error}
+          </div>
+        )}
         <button>Registrarse</button>
       </form >
     </section >
