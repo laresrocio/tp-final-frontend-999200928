@@ -34,7 +34,7 @@ const Login = () => {
   }
 
   return (
-    <section>
+    <section className="login-view">
       <h2 className="title-login">Bienvenido, inicia sesión</h2>
       <form onSubmit={handleSubmit}>
         <input
