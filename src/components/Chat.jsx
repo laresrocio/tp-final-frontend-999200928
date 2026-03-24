@@ -5,7 +5,7 @@ const Chat = () => {
   const [text, setText] = useState("")
   const chatBodyRef = useRef(null)
 
-  const { selectedUser, handleMessages, loggedUser } = useContext(ChatContext)
+  const { selectedUser, handleMessages, loggedUser, handleSelectedUserId } = useContext(ChatContext)
 
 
   const handleChangeText = (event) => {
@@ -16,6 +16,10 @@ const Chat = () => {
     if (event.key === "Enter") {
       sendMessage()
     }
+  }
+
+  const handleBack = () => {
+    handleSelectedUserId(null)
   }
 
   const sendMessage = () => {
@@ -53,6 +57,7 @@ const Chat = () => {
   return (
     <section className="chat">
       <header>
+        <button className="btn-back" onClick={handleBack}>←</button>
         <div>
           <h2>{selectedUser.firstName} {selectedUser.lastName}</h2>
           <p>{selectedUser.address.country}</p>

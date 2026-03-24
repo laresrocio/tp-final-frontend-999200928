@@ -33,7 +33,7 @@ Abrir el navegador en la dirección indicada por la consola (usualmente http://l
 
 ## ● Estructura del proyecto
 * **/src/components**: Contiene los componentes de UI como Aside.jsx, Chat.jsx y el UserMenu.jsx.
-* **/src/context**: Almacena el ChatContext.jsx para la gestión de mensajes y estados globales.
+* **/src/context**: Almacena el ChatContext.jsx para la gestión de gitmensajes y estados globales.
 * **/src/router**: Contiene RouterApp.jsx y la lógica de rutas protegidas.
 * **/src/services**: Incluye mockApi.js para la simulación de datos y consumo de servicios.
 * **/src/styles**: Archivo main.css con la definición de estilos, fuentes pixeladas y paleta de colores.
@@ -43,5 +43,5 @@ Abrir el navegador en la dirección indicada por la consola (usualmente http://l
 
 ## ●Enlaces del Proyecto
 
-* **Deploy en Vercel:** [Ver aplicación en vivo]()
+* **Deploy en Vercel:** [Ver aplicación en vivo](tp-final-frontend-999200928.vercel.app)
 * **Documentación técnica en DeepWiki:** [Ver Wiki del proyecto](https://deepwiki.com/laresrocio/tp-final-frontend-999200928)

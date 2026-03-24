@@ -195,7 +195,7 @@ ul {
   display: flex;
   border-radius: 8px;
   border: 2px solid var(--border);
-  background-color: var(--yellow-300);
+  background-color: var(--yellow-3000);
   padding: 10px;
   cursor: pointer;
   gap: 10px;
@@ -684,9 +684,112 @@ ul {
   box-shadow: 4px 4px 0px var(--border);
 }
 
-
+/*estilos responsive*/
 @media (max-width: 880px) {
   aside {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 5px;
+    flex-direction: column;
+  }
+
+  .message {
+    max-width: 85%;
+    font-size: 0.9rem;
+  }
+
+  .chat header {
+    padding: 10px;
+  }
+
+  .profile-info span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .login-view form,
+  .register-view form {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .login-view .title-login,
+  .register-view .title-login,
+  .cont-not-found h1 {
+    font-size: 2rem;
+  }
+
+  .avatar-grid {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-card {
+    padding: 15px;
+  }
+
+  .cont-about h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/*estilos para app en responsive*/
+@media (max-width: 768px) {
+
+  .app {
+    padding: 0;
+    gap: 0;
+  }
+
+
+  .app.list-open aside {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  .app.list-open section.chat,
+  .app.list-open section.chat-cont-empty {
+    display: none;
+  }
+
+
+  .app.chat-open aside {
+    display: none;
+  }
+
+  .app.chat-open section.chat {
+    display: flex;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+/*btn volver en celulares*/
+.btn-back {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .btn-back {
+    display: block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: var(--yellow-300);
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    font-family: var(--pixel-font);
+    font-weight: bolder;
+    cursor: pointer;
   }
 }
