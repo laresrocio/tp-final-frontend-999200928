@@ -43,5 +43,5 @@ Abrir el navegador en la dirección indicada por la consola (usualmente http://l
 
 ## ●Enlaces del Proyecto
 
-* **Deploy en Vercel:** [Ver aplicación en vivo](tp-final-frontend-999200928.vercel.app)
+* **Deploy en Vercel:** tp-final-frontend-999200928.vercel.app
 * **Documentación técnica en DeepWiki:** [Ver Wiki del proyecto](https://deepwiki.com/laresrocio/tp-final-frontend-999200928)
