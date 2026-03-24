@@ -1,16 +1,42 @@
-# React + Vite
+# WSP-95 📟 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ● Descripción del proyecto
+WSP-95 es una aplicación de mensajería instantánea que recrea la estética visual de los sistemas operativos de los años 90 (Windows 95). El proyecto permite el registro de usuarios con selección de avatares pixelados, inicio de sesión y una interfaz de chat funcional. Se priorizó la coherencia visual mediante el uso de fuentes retro, bordes de alto contraste y sombras sólidas, logrando una experiencia nostálgica pero técnicamente moderna.
 
-Currently, two official plugins are available:
+## ● Tecnologías utilizadas
+* **React.js**: Biblioteca principal para la construcción de la interfaz de usuario.
+* **Vite**: Herramienta de construcción y entorno de desarrollo.
+* **React Router Dom**: Gestión de rutas y navegación entre las pantallas de Login, Registro, Home y About.
+* **Context API**: Manejo del estado global para la autenticación y persistencia de datos del usuario.
+* **CSS**: Estilos personalizados utilizando variables y diseño adaptable (Flexbox).
+* **LocalStorage**: Persistencia de la sesión del usuario en el navegador.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ● Instrucciones para ejecutar el proyecto localmente
+Para correr la aplicación en tu entorno local, seguí estos pasos:
 
-## React Compiler
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/laresrocio/tp-final-frontend-999200928.git
+   
+2. **Navegar a la carpeta del proyecto:**
+Bash
+cd nombre-del-repo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. **Instalar las dependencias:**
+Bash
+npm install
 
-## Expanding the ESLint configuration
+4. **Iniciar el servidor de desarrollo:**
+Bash
+npm run dev
+Abrir el navegador en la dirección indicada por la consola (usualmente http://localhost:5173).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ● Estructura del proyecto
+* **/src/components**: Contiene los componentes de UI como Aside.jsx, Chat.jsx y el UserMenu.jsx.
+* **/src/context**: Almacena el ChatContext.jsx para la gestión de mensajes y estados globales.
+* **/src/router**: Contiene RouterApp.jsx y la lógica de rutas protegidas.
+* **/src/services**: Incluye mockApi.js para la simulación de datos y consumo de servicios.
+* **/src/styles**: Archivo main.css con la definición de estilos, fuentes pixeladas y paleta de colores.
+* **/src/views**: Contiene las páginas principales del flujo: Login.jsx, Register.jsx, Home.jsx, About.jsx y NotFound.jsx.
+* **/public**: Almacena recursos estáticos como el logo personalizado logo-w95.svg.
+* **index.html**: Punto de entrada de la aplicación.

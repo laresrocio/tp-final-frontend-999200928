@@ -26,7 +26,7 @@ const About = () => {
             <li><strong>React Router:</strong> Gestión de rutas dinámicas, permitiendo separar las vistas públicas (Login/Regiser/About) de las privadas (Home).</li>
             <li><strong>Context API:</strong> Implementación de un estado global para manejar la información del usuario logueado y la lista de mensajes sin recurrir a librerías externas.</li>
             <li><strong>Vite:</strong> Herramienta de construcción para un entorno de desarrollo rápido y optimizado.</li>
-            <li><strong>CSS Nativo:</strong> Para lograr el estilo retro sin librerías externas.</li>
+            <li><strong>CSS:</strong> Para lograr el estilo retro sin librerías externas.</li>
           </ul>
         </article>
         <article>
