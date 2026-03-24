@@ -1,4 +1,4 @@
-# WSP-95 📟 
+# WSP-95 
 
 ## ● Descripción del proyecto
 WSP-95 es una aplicación de mensajería instantánea que recrea la estética visual de los sistemas operativos de los años 90 (Windows 95). El proyecto permite el registro de usuarios con selección de avatares pixelados, inicio de sesión y una interfaz de chat funcional. Se priorizó la coherencia visual mediante el uso de fuentes retro, bordes de alto contraste y sombras sólidas, logrando una experiencia nostálgica pero técnicamente moderna.
@@ -40,3 +40,8 @@ Abrir el navegador en la dirección indicada por la consola (usualmente http://l
 * **/src/views**: Contiene las páginas principales del flujo: Login.jsx, Register.jsx, Home.jsx, About.jsx y NotFound.jsx.
 * **/public**: Almacena recursos estáticos como el logo personalizado logo-w95.svg.
 * **index.html**: Punto de entrada de la aplicación.
+
+## ●Enlaces del Proyecto
+
+* **Deploy en Vercel:** [Ver aplicación en vivo]()
+* **Documentación técnica en DeepWiki:** [Ver Wiki del proyecto](https://deepwiki.com/laresrocio/tp-final-frontend-999200928)
